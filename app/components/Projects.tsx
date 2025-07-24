@@ -134,7 +134,7 @@ const Projects = () => {
 
           {/* Filter Buttons */}
           <div className="flex justify-center mb-12">
-            <div className="flex flex-wrap gap-2 p-2 bg-gray-800/50 rounded-xl glass">
+            <div className="flex justify-center flex-wrap gap-2 p-2 bg-gray-800/50 rounded-xl glass">
               {categories.map((category) => (
                 <button
                   key={category}

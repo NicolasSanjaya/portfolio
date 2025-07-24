@@ -169,12 +169,12 @@ const Contact = () => {
                     target="_blank"
                     key={index}
                     href={info.link}
-                    className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl glass glow-on-hover group transition-all duration-300 my-4"
+                    className="flex items-center p-4 bg-gray-800/50 rounded-xl glass glow-on-hover group transition-all duration-300 my-4"
                   >
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <info.icon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
+                    <div className="ml-4">
                       <h4 className="text-white font-semibold">{info.title}</h4>
                       <p className="text-gray-300 group-hover:text-blue-400 transition-colors">
                         {info.value}
@@ -187,14 +187,14 @@ const Contact = () => {
               {/* Social Links */}
               <div>
                 <h4 className="text-white font-semibold mb-4">Follow Me</h4>
-                <div className="flex space-x-4">
+                <div className="flex">
                   {socialLinks.map((social, index) => (
                     <Link
                       key={index}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 transition-all duration-300 glow-on-hover group"
+                      className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 transition-all duration-300 glow-on-hover group mr-4"
                       aria-label={social.label}
                     >
                       <social.icon className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors" />

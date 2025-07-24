@@ -62,11 +62,11 @@ const Footer = () => {
           <div className="grid md:grid-cols-4 gap-8">
             {/* Brand Section */}
             <div className="md:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
+              <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
                   <Code2 className="w-7 h-7 text-white" />
                 </div>
-                <div>
+                <div className="ml-4">
                   <h3 className="text-2xl font-bold gradient-text">
                     Nicolas Sanjaya
                   </h3>
@@ -80,14 +80,14 @@ const Footer = () => {
                 always building.
               </p>
 
-              <div className="flex space-x-4">
+              <div className="flex">
                 {socialLinks.map((social, index) => (
                   <Link
                     key={index}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 transition-all duration-300 group"
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 transition-all duration-300 group mr-4"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors" />
@@ -99,12 +99,12 @@ const Footer = () => {
             {/* Quick Links */}
             <div>
               <h4 className="text-white font-semibold mb-6">Quick Links</h4>
-              <ul className="space-y-3">
+              <ul>
                 {quickLinks.map((link, index) => (
                   <li key={index}>
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                      className="text-gray-400 hover:text-blue-400 transition-colors duration-300 my-2"
                       onClick={(e) => {
                         e.preventDefault();
                         document.querySelector(link.href)?.scrollIntoView({
@@ -152,14 +152,17 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="border-t border-gray-800 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
-                <span>© {currentYear} Nicolas Sanjaya. Made with</span>
-                <Heart className="w-4 h-4 text-red-500 animate-pulse" />
-                <span>using Next.js & Tailwind CSS</span>
+              <div className="flex flex-wrap gap-4 items-center text-gray-400 mb-4 md:mb-0">
+                <span>© {currentYear} Nicolas Sanjaya.</span>
+                <span className="flex items-center">
+                  Made with{" "}
+                  <Heart className="w-4 h-4 text-red-500 animate-pulse mx-2" />{" "}
+                  using Next.js & Tailwind CSS
+                </span>
               </div>
 
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <span>Available for new opportunities</span>
+              <div className="flex items-center text-sm text-gray-400">
+                <span className="mr-6">Available for new opportunities</span>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   <span className="text-green-400">Online</span>

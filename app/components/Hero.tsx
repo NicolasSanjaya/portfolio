@@ -73,10 +73,14 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <button className="btn-primary flex items-center gap-2">
+            <Link
+              href="/resume.pdf"
+              className="btn-primary flex items-center gap-2"
+              download
+            >
               <Download size={20} />
               Download Resume
-            </button>
+            </Link>
             <Link
               href={"#projects"}
               className="btn-secondary flex items-center gap-2"
@@ -86,7 +90,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 mb-16">
+          <div className="flex justify-center mb-16">
             {[
               { icon: Github, href: "#", label: "GitHub" },
               { icon: Linkedin, href: "#", label: "LinkedIn" },
@@ -95,7 +99,7 @@ const Hero = () => {
               <Link
                 key={index}
                 href={social.href}
-                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 glow-on-hover group"
+                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 glow-on-hover group mx-4"
                 aria-label={social.label}
               >
                 <social.icon className="w-5 h-5 text-gray-300 group-hover:text-white" />
